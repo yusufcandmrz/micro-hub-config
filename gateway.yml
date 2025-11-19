@@ -8,13 +8,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: example_route
-          uri: https://httpbin.org:443
-          predicates:
-            - Path=/get
-          filters:
-            - AddRequestHeader=Hello, World
+      routes: []
 
 eureka:
   client:
@@ -22,5 +16,3 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
-  instance:
-    prefer-ip-address: true
