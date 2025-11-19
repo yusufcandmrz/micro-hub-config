@@ -24,9 +24,3 @@ eureka:
     fetch-registry: true
   instance:
     prefer-ip-address: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: gateway, health, info, metrics, prometheus
