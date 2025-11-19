@@ -9,11 +9,11 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: home_route
-          uri: http://example.com
+        - id: example_route
+          uri: https://httpbin.org:443
           predicates:
-            - Path=/
-          filter:
+            - Path=/get
+          filters:
             - AddRequestHeader=Hello, World
 
 eureka:
