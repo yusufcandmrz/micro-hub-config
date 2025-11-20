@@ -10,9 +10,9 @@ spring:
           lower-case-service-id: true
       routes:
         - id: example_route
-          uri: https://httpbin.org:443
+          uri: https://httpbin.org
           predicates:
-            - Path=/get
+            - Path=/get/**
           filters:
             - AddRequestHeader=Hello, World
 
